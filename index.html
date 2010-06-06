@@ -12,7 +12,9 @@
 </ul>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js'></script>
 <script type="text/javascript" src="http://github.com/arieh/Mootools-DateRange/raw/master/Source/DateRange.js"></script>
+
 <script type="text/javascript">
+//<![CDATA[
 var range = new DateRange(new Date(),new Date(+(new Date)+10000));
 function setResult(date){
 	$('result').adopt(new Element('li').set('html',(date + ' :: <strong>' + (range.isValid(date) ? 'in' : 'out') + '</strong>')));
@@ -21,6 +23,7 @@ function setResult(date){
 setResult(new Date());
 setTimeout(function(){setResult(new Date());},5000);
 setTimeout(function(){setResult(new Date());},15000);
+//]]>
 </script>
 </body>
 </html>
