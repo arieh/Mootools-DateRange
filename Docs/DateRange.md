@@ -68,3 +68,14 @@ Allows to freeze or unfreeze the range's paramaters. When a date is freezed, att
 
 1. state (`bool`) : New freeze state. If not suppied will toggle state.
 
+DateRange Method: substract {#DateRange:substract}
+---------------------------------------
+Substracts specified time from start date
+
+### Syntax
+	range.substract(int,unit);
+	
+### Arguments
+
+1. int (`int`) : How much time to substract.
+2. unit (`string`) : What time-unit to substract. Can be 'miliseconds','seconds','minutes','hours','days','weeks','years'. (default: `milisc

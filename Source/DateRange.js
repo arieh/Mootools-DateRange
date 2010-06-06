@@ -1,3 +1,20 @@
+/*
+---
+description: A Date-Range interface to pass between classes
+
+license: MIT-style
+
+authors:
+- Christopher Pitt
+- Arieh Glazer
+
+requires:
+- core/1.2.4: Class
+
+provides: [DateRange]
+
+...
+*/
 (function(){
 var dates = {};
 DateRange = new Class({
@@ -53,6 +70,7 @@ DateRange = new Class({
 		return date;
 	}
 	, add : function(num,type){
+		if (this.freeze) throw "Range is Frozen. Editing paramaters is not allowed";
 		var new_date = 0
 			, numbers = {
 				 miliseconds : 1
@@ -71,6 +89,7 @@ DateRange = new Class({
 		dates[this.id].end = new Date(new_date);
 	}
 	, substract : function(num,type){
+		if (this.freeze) throw "Range is Frozen. Editing paramaters is not allowed";
 		var new_date = 0
 			, numbers = {
 				 miliseconds : 1
