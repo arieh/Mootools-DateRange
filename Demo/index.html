@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xml:lang='en' land='en'>
+<head>
+	<title>DateRange</title>
+</head>
+<body>
+<h1>DateRange Test</h1>
+<h2>Wait for 15 seconds</h2>
+<ul id='result'>
+</ul>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js'></script>
+<script type="text/javascript" src="../Source/DateRange.js"></script>
+<script type="text/javascript">
+var range = new DateRange(new Date(),new Date(+(new Date)+10000));
+function setResult(date){
+	$('result').adopt(new Element('li').set('html',(date + ' :: <strong>' + (range.isValid(date) ? 'in' : 'out') + '</strong>')));
+}
+
+setResult(new Date());
+setTimeout(function(){setResult(new Date());},5000);
+setTimeout(function(){setResult(new Date());},15000);
+</script>
+</body>
+</html>
