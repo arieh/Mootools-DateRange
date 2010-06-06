@@ -4,6 +4,8 @@ DateRange
 This Class supplies an interface for setting date ranges and checking various dates against them. This can be used to pass time paramaters between colaborating classes
 It also allow colabortors to set each other's date-ranges by modifing the same range instance (each range gets a uniq dentifier to make sure that a range will not be mutable).
 
+![Screenshot](http://github.com/arieh/Mootools-DateRange/raw/master/daterange.png)
+
 How to use
 ----------
 	#JS
