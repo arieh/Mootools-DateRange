@@ -68,6 +68,18 @@ Allows to freeze or unfreeze the range's paramaters. When a date is freezed, att
 
 1. state (`bool`) : New freeze state. If not suppied will toggle state.
 
+DateRange Method: add {#DateRange:add}
+---------------------------------------
+Addss specified time to end date
+
+### Syntax
+	range.add(int,unit);
+	
+### Arguments
+
+1. int (`int`) : How much time to add.
+2. unit (`string`) : What time-unit to add. Can be 'miliseconds','seconds','minutes','hours','days','weeks','years'. (default: `milisc
+
 DateRange Method: substract {#DateRange:substract}
 ---------------------------------------
 Substracts specified time from start date
